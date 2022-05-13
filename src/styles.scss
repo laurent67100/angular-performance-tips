@@ -1,0 +1,41 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+/* Add application styles & imports to this file! */
+$dark: #20826c;
+$light: #fff;
+$spacing: 20px;
+$border: 2px;
+
+$hover-size: $spacing * 2 - $border * 2;
+$hover-margin: -38px;
+
+body {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-family: Lato;
+  background-color: rgb(37, 36, 41);
+  color: rgb(243, 243, 243);
+}
