@@ -1,0 +1,7 @@
+<app-search-character></app-search-character>
+
+<div class="list">
+  <ng-container *ngFor="let character of characters$ | async">
+    <app-card-demo [character]="character"></app-card-demo>
+  </ng-container>
+</div>

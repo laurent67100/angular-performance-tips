@@ -1,1 +1,44 @@
-<app-card-container-1></app-card-container-1>
+<mat-tab-group>
+  <mat-tab label="Demo">
+    <ng-template matTabContent>
+      <div class="tab-wrapper">
+        <app-card-container-demo></app-card-container-demo>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Bad Performance">
+    <ng-template matTabContent>
+      <div class="tab-wrapper">
+        <div class="description">
+          <h5 class="action-text">Open the chrome dev tools console. Now try to hover
+            the cards info icon or start typing a filter text.<br>
+          Component is </h5>
+          <h3>Bad performance is related to:</h3>
+          <ul>
+            <li>Default/Automatic Change Detection (no OnPush)</li>
+            <li>Direct template function calls</li>
+            <li>No TrackBy function for ngFor</li>
+          </ul>
+        </div>
+        <app-card-container-1></app-card-container-1>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Good Performance">
+    <ng-template matTabContent>
+      <div class="tab-wrapper">
+        <div class="description">
+          <h5 class="action-text">Open the chrome dev tools and check the logs to see what is happening. Try to hover
+            the cards info icon.</h5>
+          <h3>Good performance is related to:</h3>
+          <ul>
+            <li>OnPush Change Detection (check is done on component's Input() binding change or event triggered)</li>
+            <li>Using pipes in templates</li>
+            <li>trackBy method provided to ngFor</li>
+          </ul>
+        </div>
+        <app-card-container-2></app-card-container-2>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

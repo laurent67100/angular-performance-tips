@@ -1,0 +1,5 @@
+<app-search-character></app-search-character>
+
+<div class="list">
+    <app-card-2 *ngFor="let character of characters$ | async; trackBy: trackByCharacterId" [character]="character"></app-card-2>
+</div>

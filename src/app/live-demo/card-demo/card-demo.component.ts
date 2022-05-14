@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
   Input,
@@ -8,21 +7,19 @@ import {
 import { Character } from '../../model';
 
 @Component({
-  selector: 'app-card-1',
-  templateUrl: './card-1.component.html',
-  styleUrls: ['./card-1.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-card-demo',
+  templateUrl: './card-demo.component.html',
+  styleUrls: ['./card-demo.component.scss'],
 })
-export class Card1Component implements OnInit {
+export class CardDemoComponent implements OnInit {
   @Input() character: Character;
 
   constructor(private _changeDetector: ChangeDetectorRef) {}
 
   ngOnInit() {}
-  ngAfterViewInit() {}
 
   get characterInfo(): string {
-    console.log('# characterInfo ->', this.character.name);
+    console.log('# Computing character info ->', this.character.name);
 
     return [
       this.character.species || 'Unknown species',
@@ -32,6 +29,6 @@ export class Card1Component implements OnInit {
 
   logHover() {
     console.log('------------------------------------------------------');
-    console.log('card Hovered', this.character.name);
+    console.log('# Card hovered ->', this.character.name);
   }
 }

@@ -1,0 +1,10 @@
+<div class="image">
+  <img [src]="character.image" />
+</div>
+<div class="info">
+  <h5>{{ character.name }}</h5>
+  <h6>{{ character | applyFunction: getCharacterInfo }}</h6>
+</div>
+<div class="action">
+  <i class="material-icons"  (mouseover)="logHover()">info</i>
+</div>
