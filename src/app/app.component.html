@@ -1,1 +1,26 @@
-<app-card-container-1></app-card-container-1>
+<mat-tab-group>
+  <mat-tab label="Demo">
+    <ng-template matTabContent>
+      <div class="tab-wrapper">
+        <app-card-list-demo></app-card-list-demo>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Best Performance">
+    <ng-template matTabContent>
+      <div class="tab-wrapper">
+<!--        <div class="description">-->
+<!--          <h5 class="action-text">Open the chrome dev tools console. Now try to hover-->
+<!--            the cards info icon, sort the data or start typing a filter text. Now do the same and compare with the demo example.</h5>-->
+<!--          <h3>It's more performant than the demo example thanks to:</h3>-->
+<!--          <ul>-->
+<!--            <li>OnPush Change Detection (check is done on component's Input() binding change or event triggered)</li>-->
+<!--            <li>Using pipes in templates instead of direct template function calls</li>-->
+<!--            <li>A trackBy method is provided to ngFor</li>-->
+<!--          </ul>-->
+<!--        </div>-->
+        <app-card-list></app-card-list>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

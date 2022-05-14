@@ -1,3 +1,29 @@
 :host {
   display: block;
+
+  .tab-wrapper {
+    padding: 16px 0;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-row-gap: 32px;
+
+    .description {
+      background-color: rgba(255,255,255,.05);
+      border-radius: 10px;
+      padding: 16px;
+
+      .action-text {
+        font-size: smaller;
+        opacity: 0.5;
+        font-weight: lighter;
+        font-style: italic;
+      }
+    }
+  }
+
+  ul {
+    font-size: smaller;
+  }
 }
+
+

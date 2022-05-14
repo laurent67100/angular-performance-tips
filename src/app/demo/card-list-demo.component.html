@@ -1,0 +1,9 @@
+<app-search-character></app-search-character>
+
+<span class="count">{{count$ | async}} characters</span>
+
+<div class="list">
+  <ng-container *ngFor="let character of characters$ | async; trackBy: trackByCharacterId">
+    <app-card-demo [character]="character"></app-card-demo>
+  </ng-container>
+</div>

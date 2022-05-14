@@ -3,13 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { Module1Module } from './no-change-detection/module-1/module-1.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PerformanceModule } from './performance/performance.module';
+import { ModuleDemoModule } from './demo/module-demo.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule, Module1Module],
-  declarations: [AppComponent, HelloComponent],
+  imports: [BrowserModule, FormsModule, HttpClientModule, PerformanceModule, ModuleDemoModule, MatTabsModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
+  exports: []
 })
-export class AppModule {}
+export class AppModule {
+}
