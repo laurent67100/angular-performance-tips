@@ -7,7 +7,6 @@ import { Character } from '../model';
   selector: 'app-card-list-demo',
   templateUrl: './card-list-demo.component.html',
   styleUrls: ['./card-list-demo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardListDemoComponent implements OnInit {
   characters$: Observable<Character[]>;
@@ -15,13 +14,14 @@ export class CardListDemoComponent implements OnInit {
 
   constructor(private _dataSourceService: DataSourceService) {
     this.characters$ = this._dataSourceService.filteredCharacters$;
-    this.count$ = this._dataSourceService.filteredCharacters$.pipe(map(characters => characters.length));
+    this.count$ = this._dataSourceService.filteredCharacters$.pipe(
+      map((characters) => characters.length)
+    );
   }
 
-  ngOnInit() {
-  }
-  
-  trackByCharacterId(_, character: Character) {
-    return character.id;
-  }
+  ngOnInit() {}
+
+  // trackByCharacterId(_, character: Character) {
+  //   return character.id;
+  // }
 }
